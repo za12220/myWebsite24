@@ -1,57 +1,178 @@
-<html>
+<!DOCTYPE html>
+<html lang="en">
 <head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Arctic Animals</title>
   <style>
-     body{
-         text-align: center;
-         background-image: radial-gradient(rgb(172, 223, 221), rgb(135,206, 250));
-         min-width: 100%;
-         min-height: 100%;
-      }
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      text-align: center;
+      background-image: radial-gradient(rgb(172, 223, 221), rgb(135, 206, 250));
+      color: #333;
+    }
+
+    h1, h2, h3 {
+      color: rgb(0, 102, 153);
+    }
+
+    p {
+      text-align: justify;
+      margin: 20px auto;
+      max-width: 800px;
+      line-height: 1.6;
+    }
+
+    img {
+      margin: 20px auto;
+      border: 2px solid #ccc;
+      border-radius: 8px;
+    }
+
+    /* Navbar Styling */
+    .navbar {
+      position: fixed;
+      top: 0;
+      width: 100%;
+      background-color: rgb(0, 102, 153);
+      color: white;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+      z-index: 1000;
+    }
+
+    .navbar a {
+      float: left;
+      display: block;
+      color: white;
+      text-align: center;
+      padding: 14px 20px;
+      text-decoration: none;
+      font-size: 1rem;
+    }
+
+    .navbar a:hover {
+      background-color: rgb(0, 153, 204);
+    }
+
+    .navbar a.active {
+      background-color: rgb(0, 204, 255);
+    }
+
+    .content {
+      padding: 20px 20px; /* Prevent overlap with navbar */
+    }
+
+    /* Back to Top Button */
+    .back-to-top {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      background-color: rgb(0, 102, 153);
+      color: white;
+      border: none;
+      border-radius: 50%;
+      font-size: 18px;
+      padding: 10px 15px;
+      cursor: pointer;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+      display: none;
+    }
+
+    .back-to-top:hover {
+      background-color: rgb(0, 153, 204);
+    }
+
+    /* Smooth scrolling */
+    html {
+      scroll-behavior: smooth;
+    }
   </style>
 </head>
-
 <body>
-<h1>Arctic Animals</h1>
 
-<h2>Introduction</h2>
-<p>
-<font>In all, the Arctic is home to more than 21,000 known species of highly cold-adapted mammals, birds,<br> fish, invertebrates, plants and fungi and microbe species. About 67 species of terrestrial mammals and 35 species of marine mammals occupy this biome, at least seasonally.</font>
-</p>
-<h2>Types of Arctic Animals</h2>
+  <!-- Navbar -->
+  <div class="navbar">
+    <a href="#introduction" class="active">Introduction</a>
+    <a href="#types">Types</a>
+    <a href="#mammals">Mammals</a>
+    <a href="#marine-animals">Marine Animals</a>
+  </div>
 
-<p>There are many Arctic animals but in this case we will only be talking about a few,<br> such as the most endangered, well known animals (which peolple mught not know a lot about) and marine animals. </p>
+  <!-- Content -->
+  <div id="introduction" class="content">
+  <br>
+    <h1>Arctic Animals</h1>
+    <h2>Introduction</h2>
+    <p>
+      In all, the Arctic is home to more than 21,000 known species of highly cold-adapted mammals, birds, fish,
+      invertebrates, plants, fungi, and microbe species. About 67 species of terrestrial mammals and 35 species
+      of marine mammals occupy this biome, at least seasonally.
+    </p>
+  </div>
 
-<p>First off we will be talking about the main animals, or the most well known ones.<br>
-Such as pola bears and an arctic fox (which are the most well known)</p>
+  <div id="types" class="content">
+    <h2>Types of Arctic Animals</h2>
+    <p>
+      There are many Arctic animals, but in this case, we will only be talking about a few, such as the most endangered,
+      mammals, and marine animals.
+    </p>
+  </div>
 
-<h3>Polar bear</h3>
+  <div id="mammals" class="content">
+    <h1>Mammals</h1>
+    <p>
+      First off, we will be talking about the mammals, or the most well-known ones. Such as polar bears and the Arctic fox (which are the most well-known).
+    </p>
+    <h3>Polar Bear</h3>
+    <img src="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD..." width="200" alt="Polar Bear">
+    <p>
+      Undoubtedly the King of the Arctic, the mighty polar bear (Ursus maritimus) is a large mammal, growing up to 2.7m long
+      and 720kg in weight. Their thick insulating fur, which even grows on the bottom of their paws, allows them to camouflage
+      with the snow, whereas their skin is black, to allow for better absorption of the heat from the sun.
+    </p>
 
-<img src=data:image/jpeg;base64,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 width=200><br>
+    <h3>Arctic Fox</h3>
+    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR9u7s9dhuV5j6U4u8-Brs8JCTrnBpWW0L2cw&s" width="150" alt="Arctic Fox">
+    <p>
+      Otherwise known as Vulpes lagopus, this small, omnivorous land mammal has adapted to the far North, with the ability
+      to survive frigid temperatures as low as -50 degrees Celsius. It can be found in North Canada, Greenland, Iceland, and Svalbard.
+      Its seasonal blue/grey fur allows for superb winter camouflage, aiding in evasion from its predators.
+    </p>
+  </div>
 
-<p>
-Undoubtedly the King of the Arctic, the mighty polar bear (Ursus maritimus) is a large mammal, growing up to 2.7m long and 720kg in weight. Their thick insulating fur, which even grows on the bottom of their paws, allows them to camouflage with the snow, whereas their skin is black, to allow for better absorption of the heat from the sun.
-</p>
+  <div id="marine-animals" class="content">
+    <h1>Marine Animals</h1>
+    <h3>Narwhal</h3>
+    <img src="https://bio.au.dk/fileadmin/rks.au.dk/Nyheder_Arrangementer/NarhvalerPaulNicklen_.jpg" width="150" alt="Narwhal">
+    <p>
+      Narwhals are most known for their tusk, which can be up to 3 meters long. The tusk is actually a tooth. Male narwhals tend to have a tusk,
+      while females typically do not. Scientists discovered that the tusk allows narwhals to sense salinity and temperatures through porous
+      parts of the tusk.
+    </p>
+  </div>
 
-<h3>Arctic Fox</h3>
+  <!-- Back to Top Button -->
+  <button class="back-to-top" id="backToTop" title="Go to top">↑</button>
 
-<img src=https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR9u7s9dhuV5j6U4u8-Brs8JCTrnBpWW0L2cw&s width=150><br>
+  <script>
+    // Show/Hide Back to Top Button
+    const backToTopButton = document.getElementById("backToTop");
 
+    window.onscroll = () => {
+      if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
+        backToTopButton.style.display = "block";
+      } else {
+        backToTopButton.style.display = "none";
+      }
+    };
 
-Otherwise known as Vulpes lagopus, this small, omnivorous land mammal has adapted to the far North, with the ability to survive frigid temperatures as low as -50 degrees Celsius. It can be found in North Canada, Greenland, Iceland, Svalbard.They can often be seen tunnelling into snow to create burrows and shelter. Its seasonal blue/grey fur allows for superb winter camouflage, and evasion from its predators.
-
-
-<h1>Marine Animals</h1>
-
-<h3>Narwhwal</h3>
-
-<img src=https://bio.au.dk/fileadmin/rks.au.dk/Nyheder_Arrangementer/NarhvalerPaulNicklen_.jpg width=150>
-
-<p>Narwahls are most known for their tusk, which can be up to 3 meters long. The tusk is actually a tooth. Male narwhals tend to have a tusk and females do not. Sometimes females have a small tusk and males have no tusk. There are even some narwhals with double tusks. Tusks also vary in shape and dimension.
-
-<br>
-Scientists discovered that the tusk allows narwhals to sense salinity and ter temperatures through porous parts of the tusk.<br> However, the tusk’s sensory abilities are not crucial for survival, as not all narwhals have tusks.</p>
-
+    // Scroll to Top
+    backToTopButton.onclick = () => {
+      document.body.scrollTop = 0;
+      document.documentElement.scrollTop = 0;
+    };
+  </script>
 
 </body>
-
 </html>
