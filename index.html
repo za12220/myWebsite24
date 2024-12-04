@@ -1,6 +1,29 @@
-<html
+
+<!DOCTYPE html>
+<html lang="en">
 <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Scroll to Top Button</title>
   <style>
+        #scrollToTopBtn {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            padding: 10px 15px;
+            font-size: 16px;
+            cursor: pointer;
+            display: none; /* Hidden by default */
+        }
+        
+        #scrollToTopBtn:hover {
+            background-color: #45a049;
+        }
+
      body{
          text-align: center;
          background-image: radial-gradient(rgb(172, 223, 221), rgb(135,206, 250));
@@ -11,7 +34,6 @@
       
   </style>
 </head>
-
 <body>
 
 <h1>Arctic Animals</h1>
@@ -59,6 +81,29 @@ Otherwise known as Vulpes lagopus, this small, omnivorous land mammal has adapte
 <br>
 Scientists discovered that the tusk allows narwhals to sense salinity and ter temperatures through porous parts of the tusk.<br> However, the tusk’s sensory abilities are not crucial for survival, as not all narwhals have tusks.</p>
 
+  <div style="height: 1500px;"> 
+        <h1>Scroll Down and Click the Button to Go Back to Top</h1>
+        <p>Content goes here...</p>
+    </div>
+
+    <button id="scrollToTopBtn" onclick="scrollToTop()">Top</button>
+
+    <script>
+        var mybutton = document.getElementById("scrollToTopBtn");
+
+        window.onscroll = function() {
+            if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+                mybutton.style.display = "block";
+            } else {
+                mybutton.style.display = "none";
+            }
+        };
+
+        function scrollToTop() {
+            document.body.scrollTop = 0; 
+            document.documentElement.scrollTop = 0; 
+        }
+    </script>
 
 </body>
 
